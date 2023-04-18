@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Transaction</title>
+</head>
+<body>
+    <form method="post" action="/transactions/editTransaction/<%= transactions._id %>">
+
+        <input type="hidden" name="transactionId" value="<%= transactions._id %>">
+        description: 
+        <input type="text" 
+               value="<%= transactions.description %>"
+               name="description"><br>
+        category: 
+        <input type="text" 
+               value="<%= transactions.category %>"
+               name="category"><br>
+        amount: 
+        <input type="number" 
+               value="<%= transactions.amount %>"
+               name="amount"><br>
+        date: 
+        <input type="date" 
+               value="<%= transactions.date.toISOString().substring(0, 10) %>"
+               name="date"><br>
+        <input type="submit" value="store">
+    </form>
+</body>
+</html>

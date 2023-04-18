@@ -1,0 +1,70 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 20%;
+}
+
+.btn-primary {
+  font-size: 18px;
+  padding: 8px 10px;
+  margin: 0;
+}
+
+.form-group label {
+  font-size: 20px;
+}
+
+.form-group input {
+  width: 50%;
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.table {
+  margin-top: 50px;
+}
+
+.form-group label {
+  font-size: 20px;
+}
+
+.form-group input {
+  width: 50%;
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.table {
+  margin-top: 50px;
+}
+
+.form-group label {
+  font-size: 20px;
+}
+
+.form-group input {
+  width: 50%;
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.table {
+  margin-top: 50px;
+}
+
+
+
+
+
+
