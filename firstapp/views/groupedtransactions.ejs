@@ -1,0 +1,26 @@
+<h1>Transactions grouped by category</h1>
+
+<div class="row">
+  <div class="col">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Total Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% transactions.forEach(function(group) { %>
+            <tr>
+              <td><%= group._id %></td>
+              <td><%= group.totalAmount %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<a href="/transactions" class="btn btn-primary">Back to Transactions</a>

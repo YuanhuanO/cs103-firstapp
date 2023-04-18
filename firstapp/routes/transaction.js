@@ -87,4 +87,22 @@ router.post('/editTransaction/:transactionId', isLoggedIn, async (req, res, next
   }
 });
 
+router.get('/groupbycategory', isLoggedIn, async (req, res) => {
+  res.locals.user = req.user;
+  try {
+    const transactions = await TransactionItem.aggregate([
+      {
+        $group: {
+          _id: '$category',
+          totalAmount: { $sum: '$amount' },
+        },
+      },
+    ]);
+
+    res.render('groupedtransactions', { transactions, user: req.session.user });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;
